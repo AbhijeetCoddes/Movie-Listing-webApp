@@ -1,0 +1,33 @@
+<%- include("header"); -%>
+    <div class="main-section">
+        <div class="side-bar">
+            <button class="side-bar-item">
+                <a href="#">Search Result</a>
+            </button>
+            <button class="side-bar-item">
+                <a href="#">All Team</a>
+            </button>
+            <button class="side-bar-item">
+                <a href="#">Core</a>
+            </button>
+            <button class="side-bar-item">
+                <a href="#">Developers</a>
+            </button>
+            <button class="side-bar-item">
+                <a href="#">Designers</a>
+            </button>
+            <button class="side-bar-item">
+                <a href="#">Mentors</a>
+            </button>
+            <button type="button" class="btn btn-dark add-btn">+ ADD</button>
+        </div>
+        <div class="movie-section">
+            <% for(var i = 0 ; i < 6 && i < titles.length ; i++){  %>
+                <div class="movie-box top">
+                    <img class="movie-poster" src="<%= poster_path[i] %>">
+                    <p class="title"><%= titles[i] %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+<%- include("footer"); -%>
